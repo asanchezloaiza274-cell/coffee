@@ -1,4 +1,14 @@
-body {
-  background: #14100d;
-  color: white;
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Manrope", system-ui, sans-serif;
+
+  --color-bg: #14100d;
+  --color-surface: #1d1713;
+  --color-surface-2: #271f19;
+  --color-line: #3a2f27;
+  --color-ink: #f1e8dc;
+  --color-muted: #b3a596;
+  --color-accent: #d9a066;
 }

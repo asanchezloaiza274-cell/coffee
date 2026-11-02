@@ -1,6 +1,8 @@
+import Welcome from "../components/home/Welcome";
+
 export default function Home() {
     return (
 
-        <h1>Este es el home</h1>
+        <Welcome />
     )
 }

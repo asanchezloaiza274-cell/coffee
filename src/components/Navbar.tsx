@@ -9,20 +9,32 @@ const links = [
 
 export default function Navbar() {
   return (
-    <header>
-      <Link to="/">Brasa</Link>
-      <nav>
+    <header className="flex items-center justify-between border-b border-line py-6">
+      <Link to="/" className="font-display leading-none text-[27px] text-ink">
+        Brasa
+      </Link>
+      <nav className="flex items-center gap-7 text-sm">
         {links.map(({ to, label }) => (
           <NavLink
             key={to}
             to={to}
             end={to === "/"}
-            className={({ isActive }) => (isActive ? "on" : "")}
+            className={({ isActive }) => `
+              text-[15px] transition-colors hover:text-accent ${
+                isActive ? "text-accent" : "text-muted"
+              }
+            
+            `}
           >
             {label}
           </NavLink>
         ))}
-        <Link to="/reservations">Reservar mesa</Link>
+        <Link
+          to="/reservations"
+          className="bg-accent text-black font-bold py-3 px-5"
+        >
+          Reservar mesa
+        </Link>
       </nav>
     </header>
   );

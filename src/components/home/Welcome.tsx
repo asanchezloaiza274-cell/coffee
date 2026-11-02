@@ -1,0 +1,45 @@
+import { NavLink } from "react-router-dom";
+import ExampleImg from "../../img/example.PNG";
+
+export default function Welcome() {
+  return (
+    <section className="flex items-center gap-10 py-20">
+      <div className="flex flex-col gap-7 w-full">
+        <span className="tracking-[0.2em] font-semibold text-accent  text-sm">
+          TOSTADURÍA Y CAFETERÍA
+        </span>
+        <h1 className="font-display text-[clamp(3.75rem,8vw,6rem)] font-medium leading-[1.05]">
+          El café,
+          <br />
+          <em className="italic text-accent">con calma.</em>
+        </h1>
+        <p className="max-w-115 text-[17px] text-muted md:text-[19px]">
+          Granos de origen tostados cada semana, repostería casera y una mesa
+          esperándote.
+        </p>
+        <div className="flex items-center gap-3">
+          <NavLink
+            to="/reservations"
+            className={`bg-accent text-black font-bold py-3 px-5 text-sm`}
+          >
+            Reservar mesa
+          </NavLink>
+          <NavLink
+            to="/menu"
+            className={`bg-transparent text-accent font-semibold py-3 px-5 text-sm border-2 border-line`}
+          >
+            Reservar mesa
+          </NavLink>
+        </div>
+      </div>
+
+      <div className="w-full">
+        <img
+          src={ExampleImg}
+          alt="Imágen de bienvenida"
+          className="w-full h-full"
+        />
+      </div>
+    </section>
+  );
+}
