@@ -1,5 +1,6 @@
 import Favorites from "../components/home/Favorites";
-import Review from "../components/home/Review";
+import Table from "../components/home/Table";
+import Testimonial from "../components/home/Testimonial";
 import Welcome from "../components/home/Welcome";
 
 export default function Home() {
@@ -7,7 +8,8 @@ export default function Home() {
     <>
       <Welcome />
       <Favorites />
-      <Review />
+      <Testimonial />
+      <Table />
     </>
   );
 }
