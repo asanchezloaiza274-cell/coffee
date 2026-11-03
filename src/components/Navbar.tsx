@@ -1,19 +1,41 @@
 import { Link, NavLink } from "react-router-dom";
-
-const links = [
-  { to: "/", label: "Inicio" },
-  { to: "/menu", label: "Menú" },
-  { to: "/about-us", label: "Nosotros" },
-  { to: "/reservations", label: "Reservas" },
-];
+import NavbarMobile from "./NavbarMobile";
+import { links } from "../constants";
+import MenuIcon from "../img/menu.svg";
+import { useState } from "react";
 
 export default function Navbar() {
+  const [isMenuClose, setIsMenuClose] = useState(true);
+
+  const openMenu = () => {
+    setIsMenuClose(false);
+  };
+
+  const closeMenu = () => {
+    setIsMenuClose(true)
+    console.log("Hola");
+    
+  };
+
   return (
     <header className="flex items-center justify-between border-b border-line py-6 max-w-7xl mx-auto px-5 md:px-0">
-      <Link to="/" className="font-display leading-none text-[27px] text-ink">
+      <Link
+        to="/"
+        className="font-display leading-none text-[38px] md:text-[27px] text-ink"
+      >
         Brasa
       </Link>
-      <nav className="hidden items-center gap-7 text-sm">
+
+      <button onClick={openMenu}>
+        <img
+          src={MenuIcon}
+          alt="Menú Hamburguesa"
+          className="text-white flex lg:hidden"
+          width={38}
+        />
+      </button>
+
+      <nav className="hidden lg:flex items-center gap-7 text-sm">
         {links.map(({ to, label }) => (
           <NavLink
             key={to}
@@ -36,6 +58,7 @@ export default function Navbar() {
           Reservar mesa
         </Link>
       </nav>
+      <NavbarMobile isMenuClose={isMenuClose} closeMenu={closeMenu} />
     </header>
   );
 }
