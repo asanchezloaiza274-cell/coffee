@@ -24,15 +24,15 @@ const favorites = [
 
 export default function Favorites() {
   return (
-    <section className="flex flex-col gap-10 py-27 max-w-7xl mx-auto">
-      <div className="flex flex-col gap-1">
+    <section className="flex flex-col gap-6 md:gap-10 py-27 max-w-7xl mx-auto px-5 md:px-0">
+      <div className="flex flex-col gap-10 md:gap-1">
         <div className="flex justify-between">
-          <span className="uppercase font-semibold tracking-[0.2em] text-accent text-sm">
+          <span className="uppercase font-semibold tracking-[0.2em] text-accent text-xs">
             Selección
           </span>
           <Link
             to="/menu"
-            className="uppercase text-sm border-b border-accent pb-0.5 font-semibold  tracking-[0.2em] text-accent transition hover:brightness-125"
+            className="uppercase text-xs border-b border-accent pb-0.5 font-semibold  tracking-[0.2em] text-accent transition hover:brightness-125"
           >
             Ver carta completa
           </Link>
@@ -41,7 +41,7 @@ export default function Favorites() {
           Favoritos de la casa
         </h2>
       </div>
-      <div className="grid grid-cols-3 gap-10">
+      <div className="grid md:grid-cols-3 gap-10">
         {favorites.map(({ image, title, text, price }, index) => (
           <article
             key={index}

@@ -9,11 +9,11 @@ const links = [
 
 export default function Navbar() {
   return (
-    <section className="flex items-center justify-between border-b border-line py-6 max-w-7xl mx-auto">
+    <header className="flex items-center justify-between border-b border-line py-6 max-w-7xl mx-auto px-5 md:px-0">
       <Link to="/" className="font-display leading-none text-[27px] text-ink">
         Brasa
       </Link>
-      <nav className="flex items-center gap-7 text-sm">
+      <nav className="hidden items-center gap-7 text-sm">
         {links.map(({ to, label }) => (
           <NavLink
             key={to}
@@ -36,6 +36,6 @@ export default function Navbar() {
           Reservar mesa
         </Link>
       </nav>
-    </section>
+    </header>
   );
 }

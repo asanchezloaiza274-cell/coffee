@@ -9,7 +9,7 @@ export default function Footer() {
 
   return (
     <footer className="border-t border-line mt-24 py-10">
-      <div className="grid grid-cols-3 text-sm  max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 text-sm  max-w-7xl mx-auto px-5 md:px-0">
         <Link
           to="/"
           className="font-display text-[1.75rem] font-medium leading-none"
