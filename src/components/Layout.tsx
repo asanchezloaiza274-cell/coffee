@@ -5,7 +5,7 @@ import ScrollToTop from "./ScrollToTop";
 
 export default function Layout() {
   return (
-    <div className="max-w-7xl mx-auto">
+    <div>
       <ScrollToTop />
       <Navbar />
       <main>

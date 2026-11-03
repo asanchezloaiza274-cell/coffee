@@ -24,7 +24,7 @@ const favorites = [
 
 export default function Favorites() {
   return (
-    <section className="flex flex-col gap-10 py-27">
+    <section className="flex flex-col gap-10 py-27 max-w-7xl mx-auto">
       <div className="flex flex-col gap-1">
         <div className="flex justify-between">
           <span className="uppercase font-semibold tracking-[0.2em] text-accent text-sm">

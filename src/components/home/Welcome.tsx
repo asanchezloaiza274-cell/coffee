@@ -19,7 +19,7 @@ export default function Welcome() {
 
   return (
     <>
-      <section className="flex items-center gap-10 py-20">
+      <section className="flex items-center gap-10 py-20 max-w-7xl mx-auto">
         <div className="flex flex-col gap-7 w-full">
           <span className="tracking-[0.2em] font-semibold text-accent  text-sm">
             TOSTADURÍA Y CAFETERÍA
@@ -44,7 +44,7 @@ export default function Welcome() {
               to="/menu"
               className={`bg-transparent text-accent font-semibold py-3 px-5 text-sm border-2 border-line`}
             >
-              Reservar mesa
+              Ver el menú
             </NavLink>
           </div>
         </div>
@@ -58,15 +58,17 @@ export default function Welcome() {
         </div>
       </section>
 
-      <section className="grid grid-cols-3 bg-surface py-12">
-        {cards.map(({ title, text }) => (
-          <div className="flex flex-col" key={title}>
-            <h3 className="font-display text-[clamp(1.625rem,2.5vw,2.125rem)] font-medium leading-[1.05] text-accent mb-2">
-              {title}
-            </h3>
-            <p className="text-muted text-sm">{text}</p>
-          </div>
-        ))}
+      <section className="bg-surface">
+        <div className="flex justify-between items-center py-12 max-w-7xl mx-auto">
+          {cards.map(({ title, text }) => (
+            <div className="flex flex-col" key={title}>
+              <h3 className="font-display text-[clamp(1.625rem,2.5vw,2.125rem)] font-medium leading-[1.05] text-accent mb-2">
+                {title}
+              </h3>
+              <p className="text-muted text-sm">{text}</p>
+            </div>
+          ))}
+        </div>
       </section>
     </>
   );

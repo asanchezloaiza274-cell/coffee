@@ -9,7 +9,7 @@ const links = [
 
 export default function Navbar() {
   return (
-    <header className="flex items-center justify-between border-b border-line py-6">
+    <section className="flex items-center justify-between border-b border-line py-6 max-w-7xl mx-auto">
       <Link to="/" className="font-display leading-none text-[27px] text-ink">
         Brasa
       </Link>
@@ -36,6 +36,6 @@ export default function Navbar() {
           Reservar mesa
         </Link>
       </nav>
-    </header>
+    </section>
   );
 }

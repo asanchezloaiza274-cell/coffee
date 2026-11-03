@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Table() {
   return (
-    <section className="flex flex-col gap-2 border border-line bg-surface  items-center py-15 mt-30">
+    <section className="flex flex-col gap-2 border border-line bg-surface  items-center py-15 mt-30 max-w-7xl mx-auto">
       <h2 className="font-display text-[clamp(2.25rem,4vw,3.25rem)] font-medium leading-[1.05]">
         Tu mesa te espera
       </h2>
