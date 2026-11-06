@@ -1,6 +1,14 @@
+import OurHistory from "../components/AboutUs/OurHistory";
+import OurTeam from "../components/AboutUs/OurTeam";
+import Values from "../components/AboutUs/Values";
+
 export default function AboutUs() {
     return (
 
-        <h1>Acerca de nosotros</h1>
+        <main className="max-w-7xl mx-auto">
+            <OurHistory />
+            <Values />
+            <OurTeam />
+        </main>
     )
 }

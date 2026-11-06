@@ -10,7 +10,7 @@ export default function Menu() {
         <h1 className="mt-3 font-display text-[clamp(3rem,6vw,5rem)] font-medium leading-[1.05]">
           Menú
         </h1>
-        <p className="mt-4 text-muted text-sm">
+        <p className="mt-4 text-muted">
           Todo se prepara al momento. Pregunta por opciones sin gluten o
           veganas.
         </p>

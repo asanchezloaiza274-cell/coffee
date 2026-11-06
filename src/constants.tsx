@@ -1,3 +1,5 @@
+import ExampleImage from "./img/example.PNG";
+
 // Links para los headers
 
 export const links = [
@@ -95,4 +97,32 @@ export const items = [
       { name: "Bowl de granola", description: "Yogur y fruta", price: "$0.00" },
     ],
   },
+];
+
+// Valores para la página de nosotros
+
+export const values = [
+  {
+    count: "01",
+    title: "Origen responsable",
+    text: "[Cómo y con quién trabajas.]",
+  },
+  {
+    count: "02",
+    title: "Tueste semanal",
+    text: "[Frescura y perfil de tueste.]",
+  },
+  {
+    count: "03",
+    title: "Trato cercano",
+    text: "[Tu forma de recibir.]",
+  },
+];
+
+// Carta para nuestro equipo
+
+export const ourTeam = [
+  { photo: ExampleImage, name: "[Nombre]", rol: "Barista, Fundador" },
+  { photo: ExampleImage, name: "[Nombre]", rol: "Pastelería" },
+  { photo: ExampleImage, name: "[Nombre]", rol: "Tostador" },
 ];
