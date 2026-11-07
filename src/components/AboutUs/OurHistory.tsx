@@ -2,7 +2,7 @@ import ExampleImage from "../../img/example.PNG";
 
 export default function OurHistory() {
   return (
-    <section className="flex items-center gap-10 mt-20">
+    <section className="flex flex-col md:flex-row items-center gap-10 mt-10 md:mt-20">
       <div className="flex flex-col gap-5 w-full">
         <span className="uppercase font-semibold tracking-[0.2em] text-accent">
           Nuestra Historia

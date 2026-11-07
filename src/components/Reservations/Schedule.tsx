@@ -1,7 +1,7 @@
 export default function Schedule() {
   return (
     <section className="flex gap-10 w-77/100">
-      <form className="flex flex-col gap-5 bg-surface p-6 border border-line">
+      <form className="flex flex-col gap-5 bg-surface p-6 border border-line h-fit">
         <div className="flex flex-col gap-2 text-sm font-semibold">
           <label htmlFor="fullname">Nombre</label>
           <input
@@ -51,6 +51,8 @@ export default function Schedule() {
             />
           </div>
         </div>
+        <button type="submit" className="h-13 rounded-xs bg-accent text-[15px] font-bold tracking-[0.04em] text-bg transition hover:brightness-110 cursor-pointer">Confirmar reserva</button>
+        <p className="text-sm text-muted">Recibirás una confirmación por correo. Mesas reservadas durante 15 minutos.</p>
       </form>
     </section>
   );

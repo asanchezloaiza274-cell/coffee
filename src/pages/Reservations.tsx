@@ -3,7 +3,7 @@ import Schedule from "../components/Reservations/Schedule";
 
 export default function Reservations() {
   return (
-    <main className="max-w-7xl mx-auto py-20 flex flex-col gap-10">
+    <main className="max-w-7xl mx-auto py-20 flex flex-col gap-10 px-5 md:px-0">
       <section className="flex flex-col gap-1">
         <span className="text-[13px] font-semibold uppercase tracking-[0.2em] text-accent">
           Reservas y contacto
@@ -14,7 +14,7 @@ export default function Reservations() {
       </section>
 
       <div
-        className="flex gap-15
+        className="flex flex-col md:flex-row gap-15
       "
       >
         <Schedule />
@@ -34,7 +34,7 @@ export default function Reservations() {
             <p className="text-muted">[correo@tucafe.com] · [+00 000 000 000]</p>
           </div>
           <div>
-            <img src={ExampleImg} alt="Imágen de ejemplo" />
+            <img src={ExampleImg} alt="Imágen de ejemplo" className="w-full" />
           </div>
         </div>
       </div>

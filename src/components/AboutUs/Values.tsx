@@ -2,9 +2,9 @@ import { values } from "../../constants";
 
 export default function Values() {
   return (
-    <div className="grid grid-cols-3 gap-10 mt-25">
+    <div className="grid md:grid-cols-3 gap-10 mt-25">
       {values.map(({ count, title, text }, index) => (
-        <article className="flex flex-col gap-2 border border-line bg-surface p-9" key={index}>
+        <article className="flex flex-col gap-2 border border-line bg-surface p-7 md:p-9" key={index}>
           <span className="font-semibold uppercase tracking-[0.2em] text-accent">
             {count}
           </span>

@@ -2,7 +2,7 @@ import { items } from "../constants";
 
 export default function Menu() {
   return (
-    <section className="flex flex-col py-16 max-w-7xl mx-auto">
+    <section className="flex flex-col py-16 max-w-7xl mx-auto px-5 md:px-0">
       <div className="flex flex-col gap-1 text-center">
         <span className="uppercase font-semibold tracking-[0.2em] text-accent text-sm">
           La carta
@@ -16,7 +16,7 @@ export default function Menu() {
         </p>
       </div>
 
-      <div className="grid grid-cols-2 gap-20 mt-17">
+      <div className="grid md:grid-cols-2 gap-20 mt-17">
         {items.map(({ title, items }) => (
           <div key={title}>
             <h2 className="mb-4 font-display text-[clamp(1.20rem,3vw,2.75rem)] font-medium leading-[1.05] text-accent">
@@ -42,7 +42,7 @@ export default function Menu() {
         ))}
       </div>
 
-      <div className="bg-surface text-center border border-line py-9 text-muted mt-17">
+      <div className="bg-surface text-center border border-line py-9 text-muted mt-17 text-sm md:text-md">
         <p>
           Los precios incluyen impuestos. Avísanos de cualquier alergia o
           intolerancia.
