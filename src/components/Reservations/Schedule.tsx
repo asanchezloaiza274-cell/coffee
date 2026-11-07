@@ -31,13 +31,13 @@ export default function Schedule() {
             />
           </div>
           <div className="flex flex-col gap-2 text-sm font-semibold">
-            <label htmlFor="date">Hora</label>
+            <label htmlFor="time">Hora</label>
             <input
               type="time"
-              id="date"
-              name="date"
+              id="time"
+              name="time"
               className="h-10 w-full min-w-0 rounded-xs border border-[#7A6A5B] bg-bg px-4 text-base text-ink scheme-dark placeholder:text-muted/60 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
-              value="10:00"
+              defaultValue="10:00"
             />
           </div>
           <div className="flex flex-col gap-2 text-sm font-semibold">

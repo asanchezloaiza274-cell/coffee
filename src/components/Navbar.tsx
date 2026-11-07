@@ -5,17 +5,9 @@ import MenuIcon from "../img/menu.svg";
 import { useState } from "react";
 
 export default function Navbar() {
-  const [isMenuClose, setIsMenuClose] = useState(true);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const openMenu = () => {
-    setIsMenuClose(false);
-  };
-
-  const closeMenu = () => {
-    setIsMenuClose(true)
-    console.log("Hola");
-    
-  };
+  const closeMenu = () => setIsMenuOpen(false);
 
   return (
     <header className="flex items-center justify-between border-b border-line py-6 max-w-7xl mx-auto px-5 md:px-0">
@@ -26,7 +18,11 @@ export default function Navbar() {
         Brasa
       </Link>
 
-      <button onClick={openMenu}>
+      <button
+        onClick={() => setIsMenuOpen((isOpen) => !isOpen)}
+        aria-label={isMenuOpen ? "Cerrar menú" : "Abrir menú"}
+        aria-expanded={isMenuOpen}
+      >
         <img
           src={MenuIcon}
           alt="Menú Hamburguesa"
@@ -58,7 +54,7 @@ export default function Navbar() {
           Reservar mesa
         </Link>
       </nav>
-      <NavbarMobile isMenuClose={isMenuClose} closeMenu={closeMenu} />
+      <NavbarMobile isMenuClose={!isMenuOpen} closeMenu={closeMenu} />
     </header>
   );
 }

@@ -8,15 +8,22 @@ export default function NavbarMobile({
 }: NavbarMobileProps) {
   return (
     <nav
-      className={`${isMenuClose ? "hidden" : "flex"}  flex-col fixed inset-0 bg-bg py-15 h-screen text-center gap-8`}
+      aria-hidden={isMenuClose}
+      inert={isMenuClose}
+      className="mobile-nav fixed inset-0 z-50 flex h-screen flex-col gap-8 bg-bg py-15 text-center lg:hidden"
+      style={{
+        transform: isMenuClose ? "translateX(100%)" : "translateX(0)",
+        opacity: isMenuClose ? 0 : 1,
+        pointerEvents: isMenuClose ? "none" : "auto",
+      }}
     >
       {links.map(({ to, label }) => (
-        <Link key={label} to={to} className="text-3xl">
+        <Link key={label} to={to} className="text-3xl" onClick={closeMenu}>
           {label}
         </Link>
       ))}
 
-      <button onClick={closeMenu}>
+      <button onClick={closeMenu} aria-label="Cerrar menú">
         <img
           src={CloseMenuIcon}
           alt="ícono de cerrar menú"

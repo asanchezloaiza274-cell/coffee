@@ -12,3 +12,15 @@
   --color-muted: #b3a596;
   --color-accent: #d9a066;
 }
+
+.mobile-nav {
+  transition:
+    transform 300ms ease,
+    opacity 300ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mobile-nav {
+    transition-duration: 0.01ms;
+  }
+}
